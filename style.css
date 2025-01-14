@@ -1,0 +1,160 @@
+:root {
+    /* Definindo cores para usar no site */
+    --branco-principal: #ffffff; /* Cor branca */
+    --cinza-secundario: #c0c0c0; /* Cor cinza */
+    --botao-azul: #167bf7; /* Azul dos botões */
+    --cor-de-fundo: #00030c; /* Cor escura para o fundo */
+    --fonte-principal: 'Inter';
+    --botao-azul-efeito: #3c92fa;
+}
+
+body {
+    background-color: var(--cor-de-fundo); /* Fundo da página */
+    color: var(--branco-principal); /* Cor do texto */
+    font-family: var(--fonte-principal);
+    font-size:16px;
+    font-weight:400;
+}
+
+* { /* o asterisco aplica as regras a todos os elementos do documento*/
+    margin: 0; /* Tira as margens padrão */
+    padding: 0; /* Tira os espaços internos padrão */
+}
+
+.principal {
+    background-image: url("img/Background.png"); /* Adiciona uma imagem de fundo */
+    background-repeat: no-repeat; /* Não repetir a imagem */
+    background-size: contain; /* Ajustar imagem ao espaço disponível */
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    height: 100vh; /* Altura igual à tela do usuário */
+    display: grid; /* Organiza em forma de grade */
+    grid-template-columns: 50% 50%; /* Divide em duas partes iguais */
+}
+
+.container__botao {
+    background-color: var(--botao-azul); /* Fundo azul para o botão */
+    border-radius: 5px; /* Deixa os cantos arredondados */
+    padding: 1em; /* Espaço dentro do botão */
+    color: var(--branco-principal); /* Texto branco no botão */
+    display: block; /* Ocupa toda a linha */
+    text-decoration: none;
+    margin-bottom: 1em;
+}
+
+.botao__secundario {
+    background-color: transparent; /* Fundo transparente */
+    border: 2px solid var(--branco-principal); /* Borda branca */
+}
+
+.container__aviso {
+    font-size:12px;
+    color: var(--cinza-secundario)
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0; /* os valores funcionam no sentido horário */
+}
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+.dispositivos__lista {
+    display: flex; /*coloca os itens um ao lado do outro como o grid*/
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    color: var(--branco-principal)
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal)
+}
+
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.lista__link a{
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+    margin-right: 1em; /* Adiciona um espaço à direita de cada link */
+}
+
+.rodape__texto {
+    margin: 1em 0;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+}
+
+/*PSEUDOCLASSES são funções que detectam a interação com a tela, construindo uma experiência interativa com o usuário*/
+
+.lista__link a:hover { /*cria uma função que muda de cor quando o mouse passa em cima do texto*/
+    color: var(--botao-azul);
+}
+
+.lista__link a:active {
+    color: purple;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
